@@ -1,0 +1,29 @@
+/*
+	selector {propiedades}
+*/
+body {
+	margin:0;
+	padding:0;
+}
+
+header {
+	width:1220px;
+	background-color: gray;
+	margin: 0 auto;
+	padding:15px;
+}
+	/* div.logo  */
+	/* .logo  */
+
+	header div.logo {
+		width:130px;
+	}
+
+		header div.logo img {
+			width: 100%;
+			max-width:130px;
+		}
+
+
+
+
