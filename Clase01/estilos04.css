@@ -1,0 +1,59 @@
+/* Selector de etiqueta  */
+div {
+	width: 100%;
+	height: 250px;
+	background-color: red;
+}
+
+/* Selector de clase */
+.zonaBanner {
+	width:100%;
+	height: 500px;
+	background-color: yellow;
+}
+
+.pie {
+	width: 100%;
+	height: 80px;
+	background-color: blue;
+}
+
+@media screen and (min-width:480px){
+	.zonaBanner {
+		width:50%;
+		float: left;
+	}
+
+	.pie {
+		width:50%;
+		float:left;
+	}
+}
+
+@media screen and (min-width:780px){
+	div {
+		width:33.33333333333%;
+		float:left;
+	}
+
+	.zonaBanner {
+		width:33.33333333333%;
+	}
+
+	.pie {
+		width:33.33333333333%;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
