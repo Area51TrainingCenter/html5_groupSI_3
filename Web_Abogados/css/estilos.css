@@ -56,11 +56,29 @@ header {
 				display: inline-block;
 				padding-left:22px;
 				padding-right: 22px;
+				padding-bottom:18px;
 				font-family: 'ralewaybold';
 				font-size: 12.5px;
 				color:#222;
 				text-transform: uppercase;
+
 			}
+
+				header nav li:hover {
+					border-bottom: 2px solid #f9bf3b;
+				}
+
+				header nav a, 
+				header nav a:link,
+				header nav a:active,
+				header nav a:visited,
+				header nav a:hover
+				 {
+					color:#222;
+					text-decoration: none;
+					display: block;
+					width:100%;
+				}
 
 	header div.buscador {
 		display: inline-block;
