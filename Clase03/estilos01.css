@@ -1,0 +1,48 @@
+a {
+	font-family: Verdana;
+	font-size: 40px;
+	color: black;
+}
+
+a:active {
+	color:red;
+}
+
+a:hover {
+	color:pink;
+}
+
+a:visited {
+	color:green;
+}
+
+a:link {
+ 	color:magenta;
+}
+
+div {
+	width:400px;
+	height:300px;
+	padding:1px;
+	border:1px solid black;
+}
+
+div:hover article {
+	background-color: yellow;
+	border-radius: 50px;
+}
+
+article {
+	width: 100px;
+	height: 100px;
+	margin-top:60px;
+	margin-left:100px;
+	border: 1px solid blue;
+	transition: all 1.5s;
+}
+
+
+
+
+
+
