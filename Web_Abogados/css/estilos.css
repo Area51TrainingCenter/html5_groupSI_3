@@ -21,6 +21,8 @@ body {
 	padding:0;
 }
 
+/* CABECERA  */
+
 header {
 	width:1220px;
 	margin: 0 auto;
@@ -117,4 +119,10 @@ header {
 			color:#ccc;
 		}				
 
+/* BANNER */
 
+article.banner {
+	width:1220px;
+	padding:15px;
+	margin: 0 auto;
+}
