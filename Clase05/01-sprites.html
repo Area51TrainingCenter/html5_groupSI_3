@@ -22,6 +22,53 @@
 		background-position: -178px top;
 	}	
 
+	article {
+		width: 184px;
+		height: 155px;
+		background-image: url(personaje.png);
+		-webkit-animation: desplazar 10s infinite;
+	}
+
+	@-webkit-keyframes personaje {
+		0% {
+			background-position: left top
+		}
+
+		17% {
+			background-position: center top
+		}
+
+		34% {
+			background-position: right top
+		}		
+
+		51% {
+			background-position: left bottom
+		}
+
+		68% {
+			background-position: center bottom
+		}	
+
+		100% {
+			background-position: right bottom
+		}			
+
+	}
+
+	@-webkit-keyframes desplazar {
+		0% {
+			margin-left:0;
+		}
+/*		50% {
+			margin-left:200px;
+		}*/
+		100% {
+			margin-left:500px;
+		}		
+
+	}
+
 	</style>
 </head>
 <body>
@@ -32,5 +79,7 @@
 	<div class="sprite04"></div>
 	<div class="sprite05"></div>
 	<div class="sprite06"></div>
+
+	<article></article>
 </body>
 </html>
