@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<article id="nombreCompleto"></article>
+
+	<script>
+	var nombre = prompt("Ingrese su nombre");
+	var apellido = prompt("Ingrese su apellido");
+
+	console.log(nombre + " " + apellido);
+
+	var elemento = document.getElementById("nombreCompleto");
+	elemento.innerHTML = nombre + " " + apellido;
+
+	</script>
+
+</body>
+</html>

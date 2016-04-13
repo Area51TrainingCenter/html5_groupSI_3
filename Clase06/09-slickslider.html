@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+	<style>
+	.banners {
+		width:500px;
+		height: 400px;
+		margin:10px auto;
+	}
+
+	.banners div {
+		width: 500px;
+		height: 400px;
+	}
+
+	.colorRojo {background: red}
+	.colorVerde {background: green}
+	.colorAmarillo {background: yellow}
+	</style>
+</head>
+<body>
+	<div class="banners">
+	  <div class="colorRojo">Banner 01</div>
+	  <div class="colorVerde">Banner 02</div>
+	  <div class="colorAmarillo">Banner 03</div>
+	</div>
+
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+	<script>
+	$(".banners").slick(
+		{
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			speed: 300
+		}
+	);
+	</script>
+
+</body>
+</html>
