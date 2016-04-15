@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="js/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="js/vendor/slick/slick-theme.css">
+
+	<style>
+		body {
+			background-color: green;
+		}
+		div.banners {
+			width: 80%;
+			height: 300px;
+			border:1px solid red;
+			box-sizing: border-box;
+			margin:0 auto;
+		}
+
+
+		.slick-next {
+			right: 10px;
+		}
+
+		.slick-prev {
+			left: 10px;
+			z-index: 5;
+		}
+
+		.ban {
+			background-color: yellow;
+			margin-left:5px;
+			margin-right:5px;
+		}
+
+		.ban:nth-child(odd) {
+			width:300px;
+		}
+
+		.ban:nth-child(even){
+			width:150px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="banners">
+		<div class="ban">Banner 1</div>
+		<div class="ban">Banner 2</div>
+		<div class="ban">Banner 3</div>
+		<div class="ban">Banner 4</div>
+		<div class="ban">Banner 5</div>
+		<div class="ban">Banner 6</div>
+		<div class="ban">Banner 7</div>
+		<div class="ban">Banner 8</div>
+	</div>
+
+	<script src="js/vendor/jquery/jquery-1.12.3.min.js"></script>
+	<script src="js/vendor/slick/slick.min.js"></script>
+	<script src="js/06-velocidad-transicion.js"></script>
+
+</body>
+</html>
