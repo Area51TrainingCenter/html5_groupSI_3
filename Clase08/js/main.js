@@ -9,4 +9,10 @@ $("document").ready(function(){
 		}
 	);
 
+	$(".banners").on("afterChange", function(){
+		$("h1").addClass("grande");
+	})
+
+	
+
 })

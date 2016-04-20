@@ -4,7 +4,8 @@
 			.banners {
 				width:1190px;
 				height: 554px;
-				margin:0 auto;
+				margin:0px auto;
+
 			}
 
 			div.item {
@@ -20,7 +21,7 @@
 			}
 
 			div.item h1 {
-				width: 60%;
+				width: 600px;
 				height:50px;
 				color: black;
 				font-family: Verdana;
@@ -28,12 +29,19 @@
 				background-color: white;
 				padding: 5px;
 				margin-left: 10px;
-				transition: 3s all;
+				transition: 1s all;
+				position:absolute;
+				top:-300px;
+				
 			}
 
 			div.item h1:hover {
 				background-color: rgba(255, 255, 255, 0.5);
 				height:100px;
+			}
+
+			div.item h1.grande {
+				top:100px;
 			}
 
 
