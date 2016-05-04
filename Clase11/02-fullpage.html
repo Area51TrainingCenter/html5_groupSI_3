@@ -37,6 +37,47 @@
 				padding-top:11px;
 				padding-bottom: 11px;
 			}
+
+			.fondo1 {
+				background-image: url(img/bg1.jpg);
+				background-size: cover;
+			}
+
+			.fondo2 {
+				background-image: url(img/bg2.jpg);
+				background-size: cover;
+			}	
+
+			.fondo3 {
+				background-image: url(img/bg3.jpg);
+				background-size: cover;
+			}
+
+			.fondo4 {
+				background-image: url(img/bg4.jpg);
+				background-size: cover;
+			}
+
+			.fondo5 {
+				background-image: url(img/bg5.jpg);
+				background-size: cover;
+			}	
+
+			article {
+				width:500px;
+				background-color: white;
+				margin:0 auto;
+			}
+
+			article h1 {
+				font-family: Tahoma;
+				font-size:50px;
+				font-weight: bold;
+				color: purple;
+				padding-top:8px;
+				padding-bottom: 8px;
+			}		
+
 		</style>
 	</head>
 	<body>
@@ -51,23 +92,27 @@
 		</ul>
 		
 		<div class="contenedorSecciones">
-			<div class="section"></div>
+			<div class="section fondo1">
+				<article>
+					<h1>Titulo de Seccion 1</h1>
+				</article>
+			</div>
 
-			<div class="section">
+			<div class="section fondo2">
 
-				<div class="slide"></div>
+				<div class="slide fondo4"></div>
 
-				<div class="slide"></div>
+				<div class="slide fondo1"></div>
 
-				<div class="slide"></div>
+				<div class="slide fondo5"></div>
 
 			</div>
 
-			<div class="section"></div>
+			<div class="section fondo3"></div>
 
-			<div class="section"></div>
+			<div class="section fondo4"></div>
 
-			<div class="section"></div>
+			<div class="section fondo5"></div>
 		</div>
 
 
@@ -81,7 +126,10 @@
 			{
 				sectionsColor: ["green", "brown", "purple", "cyan", "lightblue"],
 				anchors: ["seccion1", "seccion2", "seccion3", "seccion4", "seccion5"],
-				menu: "#menu"
+				menu: "#menu",
+				navigation: true,
+				navigationTooltips: ["Seccion1", "Seccion2", "Seccion3", "Seccion4", "Seccion5"],
+				navigationPosition: "left"
 			}
 		);
 	});
