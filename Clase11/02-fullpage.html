@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="js/vendor/fullpage/jquery.fullPage.css">
+		<style>
+/*			* {
+				font-size:80px;
+			}
+*/
+			ul#menu {
+				position: fixed;
+				z-index:100;
+				top:10px;
+				left: 10px;
+				margin:0;
+				padding: 0;
+				list-style:none;
+			}
+
+			ul#menu li {
+				display: inline-block;
+				width: 150px;
+				background-color: blue;
+				border-radius: 5px;
+			}
+
+			ul#menu li.active {
+				background-color: lightblue;
+			}
+
+			ul#menu a {
+				display: block;
+				color:white;
+				text-align: center;
+				text-decoration: none;
+				font-family: Verdana;
+				font-size:18px;
+				padding-top:11px;
+				padding-bottom: 11px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<ul id="menu">
+			<li data-menuanchor="seccion1"><a href="#seccion1">Seccion 01</a></li>
+			<li data-menuanchor="seccion2"><a href="#seccion2">Seccion 02</a></li>
+			<li data-menuanchor="seccion3"><a href="#seccion3">Seccion 03</a></li>
+			<li data-menuanchor="seccion4"><a href="#seccion4">Seccion 04</a></li>
+			<li data-menuanchor="seccion5"><a href="#seccion5">Seccion 05</a></li>
+
+		</ul>
+		
+		<div class="contenedorSecciones">
+			<div class="section"></div>
+
+			<div class="section">
+
+				<div class="slide"></div>
+
+				<div class="slide"></div>
+
+				<div class="slide"></div>
+
+			</div>
+
+			<div class="section"></div>
+
+			<div class="section"></div>
+
+			<div class="section"></div>
+		</div>
+
+
+
+<script src="js/vendor/jquery/jquery-1.12.3.min.js"></script>
+<script src="js/vendor/fullpage/jquery.fullPage.js"></script>
+
+<script>
+	$("document").ready(function(){
+		$(".contenedorSecciones").fullpage(
+			{
+				sectionsColor: ["green", "brown", "purple", "cyan", "lightblue"],
+				anchors: ["seccion1", "seccion2", "seccion3", "seccion4", "seccion5"],
+				menu: "#menu"
+			}
+		);
+	});
+</script>
+
+	</body>
+</html>
