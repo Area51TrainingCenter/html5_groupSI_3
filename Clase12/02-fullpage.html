@@ -1,0 +1,218 @@
+<html>
+	<head>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="js/vendor/fullpage/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<style>
+/*			* {
+				font-size:80px;
+			}
+*/
+			ul#menu {
+				position: fixed;
+				z-index:100;
+				top:10px;
+				left: 10px;
+				margin:0;
+				padding: 0;
+				list-style:none;
+			}
+
+			ul#menu li {
+				display: inline-block;
+				width: 150px;
+				background-color: blue;
+				border-radius: 5px;
+			}
+
+			ul#menu li.active {
+				background-color: lightblue;
+			}
+
+			ul#menu a {
+				display: block;
+				color:white;
+				text-align: center;
+				text-decoration: none;
+				font-family: Verdana;
+				font-size:18px;
+				padding-top:11px;
+				padding-bottom: 11px;
+			}
+
+			.fondo1 {
+				background-image: url(img/bg1.jpg);
+				background-size: cover;
+			}
+
+			.fondo2 {
+				background-image: url(img/bg2.jpg);
+				background-size: cover;
+			}	
+
+			.fondo3 {
+				background-image: url(img/bg3.jpg);
+				background-size: cover;
+			}
+
+			.fondo4 {
+				background-image: url(img/bg4.jpg);
+				background-size: cover;
+			}
+
+			.fondo5 {
+				background-image: url(img/bg5.jpg);
+				background-size: cover;
+			}	
+
+			article {
+				width:500px;
+				background-color: white;
+				margin:0 auto;
+				z-index:20;
+				position:relative;	
+				/*transition: 2s all;			*/
+			}
+
+			article h1 {
+				font-family: Tahoma;
+				font-size:50px;
+				font-weight: bold;
+				color: purple;
+				padding-top:8px;
+				padding-bottom: 8px;
+			}	
+
+			section {
+				width:100%;
+				margin:0 auto;
+				z-index:20;
+				position:relative;	
+				/*transition: 2s all;	*/
+				margin-left:-40px;		
+			}
+
+			section h1 {
+				font-family: Tahoma;
+				font-size:50px;
+				font-weight: bold;
+				color: purple;
+				padding-top:8px;
+				padding-bottom: 8px;
+			}		
+
+			iframe {
+				margin:0 auto;
+				display: block
+			}			
+
+			.girar {
+				transform: rotate(270deg);
+			}
+
+			video {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top:0;
+				right:0;				
+				width:100%;			
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<ul id="menu">
+			<li data-menuanchor="seccion1"><a href="#seccion1">Seccion 01</a></li>
+			<li data-menuanchor="seccion2"><a href="#seccion2">Seccion 02</a></li>
+			<li data-menuanchor="seccion3"><a href="#seccion3">Seccion 03</a></li>
+			<li data-menuanchor="seccion4"><a href="#seccion4">Seccion 04</a></li>
+			<li data-menuanchor="seccion5"><a href="#seccion5">Seccion 05</a></li>
+
+		</ul>
+		
+		<div class="contenedorSecciones">
+			<div class="section">
+				<video autoplay controls="no" muted loop>
+					<source src="videos/flowers.mp4" type="video/mp4" />
+					<source src="videos/flowers.webm" type="video/webm" />
+				</video>
+				<article>
+					<h1>Titulo de Seccion 1</h1>
+				</article>
+			</div>
+
+			<div class="section fondo2">
+
+				<div class="slide fondo4"></div>
+
+				<div class="slide fondo1"></div>
+
+				<div class="slide fondo5"></div>
+
+			</div>
+
+			<div class="section fondo3">
+				<article id="tituloSeccion3" class="animated">
+					<h1>Titulo de Seccion 3</h1>
+				</article>	
+				<section id="titulo2Seccion3" class="animated">
+					<h1>Título2 de la Seccion 3</h1>
+				</section>			
+
+			</div>
+
+			<div class="section fondo4">
+				<section>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/8-HePgZ-Kb4" frameborder="0" allowfullscreen></iframe>
+				</section>	
+
+			</div>
+
+			<div class="section fondo5"></div>
+		</div>
+
+
+
+<script src="js/vendor/jquery/jquery-1.12.3.min.js"></script>
+<script src="js/vendor/fullpage/jquery.fullPage.js"></script>
+
+<script>
+	$("document").ready(function(){
+		$(".contenedorSecciones").fullpage(
+			{
+				sectionsColor: ["green", "brown", "purple", "cyan", "lightblue"],
+				anchors: ["seccion1", "seccion2", "seccion3", "seccion4", "seccion5"],
+				menu: "#menu",
+				navigation: true,
+				navigationTooltips: ["Seccion1", "Seccion2", "Seccion3", "Seccion4", "Seccion5"],
+				navigationPosition: "left",
+				afterLoad: function(anchorLink, index) {
+					// alert("anchorLink = " + anchorLink);
+					//console.log("Index = " + index);
+
+					if(index==3) {
+/*						$("#tituloSeccion3").addClass("girar");
+						$("#titulo2Seccion3").addClass("girar");*/
+						$("#tituloSeccion3").addClass("rotateIn");
+						$("#titulo2Seccion3").addClass("fadeInLeft");	
+					} else {
+						$("#tituloSeccion3").removeClass("rotateIn");
+						$("#titulo2Seccion3").removeClass("fadeInLeft");	
+					}
+
+					if(index==4) {
+						$("iframe").toggleClass("animated rotateIn");
+					}
+
+
+				}
+
+			}
+		);
+	});
+</script>
+
+	</body>
+</html>
