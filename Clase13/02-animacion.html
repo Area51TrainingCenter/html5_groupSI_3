@@ -55,6 +55,34 @@
 				animation: moverse 2.5s infinite alternate;				
 			}
 
+			aside {
+				width:243px;
+				height: 200px;
+				position: absolute;
+				bottom: 90px;
+				left: -250px;
+				animation: moverseBote 10s infinite,
+				 			moverse 2.5s infinite alternate;
+			}
+
+			@-webkit-keyframes moverseBote {
+				0 {
+					left:-250px;
+				}
+
+				25% {
+					left: 300px;
+				}
+
+				75% {
+					left: 900px;
+				}
+
+				100% {
+					left: 1400px;
+				}
+			}
+
 			@-webkit-keyframes moverse {
 				0 {
 					bottom:-29px;
@@ -62,6 +90,7 @@
 
 				100% {
 					transform: translateY(-9px);
+					background-position: 50px top;
 				}
 			}
 		</style>
@@ -69,9 +98,14 @@
 	</head>
 	<body>
 		
+
 		<article>Arriba la U</article>
 
 		<div></div>
+
+		<aside>
+			<img src="img/bote.png" />
+		</aside>
 
 		<section class="olaSuperior"></section>
 		<section></section>
