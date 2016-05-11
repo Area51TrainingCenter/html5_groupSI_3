@@ -19,11 +19,6 @@
 				border-radius: 100px;
 				background-color: yellow;
 				box-shadow: yellow 0 0 60px;
-/*				background: -webkit-linear-gradient(top, blue, green);*/
-/*				background: -webkit-linear-gradient(bottom, blue, green);*/
-/*				background: -webkit-linear-gradient(left, blue, green);*/
-/*				background: -webkit-linear-gradient(top left, blue, green);*/
-/*				background: -webkit-linear-gradient(60deg, blue, green);*/
 			}
 
 			article {
@@ -49,18 +44,25 @@
 				width:100%;
 				background-image: url(img/wave.png);
 				background-position: center top;
-				transition: 1s transform;
+				animation: moverse 2s infinite alternate;
+				
 			}
 
-			body:hover section {
-				/*bottom:-20px;*/
-				transform: translateY(-9px);
-			}
 
 			section.olaSuperior {
 				bottom:15px;
 				background-position: 10px top;
-				transition:2.5s all;
+				animation: moverse 2.5s infinite alternate;				
+			}
+
+			@-webkit-keyframes moverse {
+				0 {
+					bottom:-29px;
+				}
+
+				100% {
+					transform: translateY(-9px);
+				}
 			}
 		</style>
 
