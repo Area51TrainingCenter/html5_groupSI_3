@@ -12,5 +12,60 @@ div.zonaSuperior {
 
 div.zonaSuperior header{
 	width:100%;
-	background: green;
 }
+
+div.zonaSuperior header div.logo{
+	text-align: center;
+	margin-bottom:10px;
+}
+
+div.zonaSuperior header nav {
+	text-align: center;
+	font-family: Arial;
+	font-size:18px;
+	color:#000;
+}
+
+div.intro {
+	width:100%;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+div.intro h1 {
+	width:90%;
+	margin:0 auto;
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: italic;
+	font-size:28px;
+	color:#000;
+}
+
+div.intro p {
+	width:90%;
+	margin:20px auto;	
+	text-align: center;
+	font-family: Arial;
+	font-size:16px;	
+}
+
+div.intro button {
+	padding:18px 40px;
+	margin:0 auto;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background: #222;
+	border-radius:4px;
+	display: block;
+	border:none;
+}
+
+
+
+
+
+
