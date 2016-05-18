@@ -1,0 +1,17 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+div.zonaSuperior {
+	width:100%;
+	border-bottom: 1px solid #ccc;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+div.zonaSuperior header{
+	width:100%;
+	height: 50px;
+	background: green;
+}

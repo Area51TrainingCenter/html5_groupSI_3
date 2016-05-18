@@ -19,6 +19,15 @@ div {
 	}
 }
 
+@media screen and (min-width:1000px) {
+	div {
+		width: 990px;
+		background: red;
+	}
+}
+
+
+
 @media print {
 	div {
 		border:5px solid green;
