@@ -110,6 +110,46 @@ div.proyectos h4 {
 	font-family: Arial;
 }
 
+div.aboutNews {
+	background-color: #e5e5e5;
+	width:100%;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+div.aboutNews article {
+	width:90%;
+	margin:0 auto;
+}
+
+div.aboutNews div.aboutMe {
+	width:100%;
+}
+
+div.aboutNews div.aboutMe h2 {
+	margin:0;
+	padding:0;
+	font-size:30px;
+	font-family: Arial;
+	margin-bottom:46px;
+	text-transform: capitalize;
+}
+
+div.aboutNews div.aboutMe p {
+	font-family: Arial;
+	font-size:15px;
+	color:#444;
+	line-height: 24px;
+}
+
+div.aboutNews div.aboutMe a {
+	width:41px;
+	height: 41px;
+	display: inline-block;
+	background-image: url(../img/iconos.jpg);
+}
+
+
 
 
 
