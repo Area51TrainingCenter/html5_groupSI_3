@@ -149,6 +149,14 @@ div.aboutNews div.aboutMe a {
 	background-image: url(../img/iconos.jpg);
 }
 
+div.aboutNews div.aboutMe a.iconoTwitter {
+	background-position: center top;
+}
+
+div.aboutNews div.aboutMe a.iconoRss {
+	background-position: right top;
+}
+
 
 
 
