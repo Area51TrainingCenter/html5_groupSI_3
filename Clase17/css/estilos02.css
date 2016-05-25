@@ -230,6 +230,18 @@ div.zonaInferior footer nav {
 }
 
 /* Versión Tableta */
+@media screen and (min-width: 520px) {
+	div.news div.new div.imagen {
+		width:49%;
+		display: inline-block;
+	}
+
+	div.news div.new div.texto {
+		width:49%;
+		display: inline-block;
+	}	
+}
+
 @media screen and (min-width: 590px) {
 	
 	div.zonaSuperior header {
@@ -250,6 +262,24 @@ div.zonaInferior footer nav {
 		text-align:right;
 	}	
 	
+	div.zonaInferior footer {
+		width:90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.zonaInferior footer h3 {
+		display: inline-block;
+		width:43%;
+		text-align: left;
+	}
+
+	div.zonaInferior footer nav {
+		display: inline-block;
+		width:55%;
+		text-align:right;
+	}	
+
 	div.proyectos {
 		text-align: center;
 	}
@@ -268,11 +298,42 @@ div.zonaInferior footer nav {
 	div.aboutNews div.aboutMe {
 		width:49%;
 		display: inline-block;
+		vertical-align: top;
 	}
 
 	div.aboutNews div.news {
 		width:49%;
 		display: inline-block;
+		vertical-align: top;
+		margin-top: auto;
+	}
+}
+
+@media screen and (min-width:960px){
+	div.zonaSuperior header {
+		width:960px;
+	}
+
+	div.intro div.textoIntro {
+		width:960px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	div.proyectos div.listaProyectos {
+		width:960px;
+		margin-left:auto;
+		margin-right:auto;	
+	}
+
+	div.aboutNews article {
+		width:960px;
+		margin-left:auto;
+		margin-right: auto
+	}
+
+	div.zonaInferior footer {
+		width:960px;
 	}
 }
 
