@@ -231,23 +231,49 @@ div.zonaInferior footer nav {
 
 /* Versión Tableta */
 @media screen and (min-width: 590px) {
+	
+	div.zonaSuperior header {
+		width:90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	div.zonaSuperior header div.logo {
 		display: inline-block;
-		width:49%;
+		width:43%;
+		text-align: left;
 	}
 
 	div.zonaSuperior header nav {
 		display: inline-block;
-		width:49%;
+		width:55%;
+		text-align:right;
+	}	
+	
+	div.proyectos {
+		text-align: center;
 	}
 
+	div.proyectos h2 {
+    	text-align: left;
+    }
+
 	div.proyectos div.proyecto {
-		width:40%;
+		width:30%;
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width:880px) {
+	div.aboutNews div.aboutMe {
+		width:49%;
 		display: inline-block;
 	}
 
-
+	div.aboutNews div.news {
+		width:49%;
+		display: inline-block;
+	}
 }
 
 
