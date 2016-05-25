@@ -1,0 +1,16 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+img {
+	width:100%;
+	max-width: 610px;
+	min-width: 500px;
+}
+
+/*@media screen and (min-width:610px) {
+	img {
+		width:610px;
+	}
+}*/
