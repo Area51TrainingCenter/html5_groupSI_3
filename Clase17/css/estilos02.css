@@ -229,6 +229,27 @@ div.zonaInferior footer nav {
 	color:#000;
 }
 
+/* Versión Tableta */
+@media screen and (min-width: 590px) {
+
+	div.zonaSuperior header div.logo {
+		display: inline-block;
+		width:49%;
+	}
+
+	div.zonaSuperior header nav {
+		display: inline-block;
+		width:49%;
+	}
+
+	div.proyectos div.proyecto {
+		width:40%;
+		display: inline-block;
+	}
+
+
+}
+
 
 
 
