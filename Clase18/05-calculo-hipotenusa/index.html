@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+		
+
+		<script>
+			var cateto1 = prompt("Ingrese la longitud del cateto 1"),
+				cateto2 = prompt("Ingrese la longitud del cateto 2");
+
+			var potencia1 = Math.pow(cateto1, 2),
+				potencia2 = Math.pow(cateto2, 2);
+
+			var sumaPotencias = potencia1 + potencia2;
+
+			var hipotenusa = Math.sqrt(sumaPotencias);
+
+			var cateto1EsNumero = isNaN(cateto1);
+			var cateto2EsNumero = isNaN(cateto2);
+
+			if(cateto1EsNumero) {
+				alert("Cateto 1 no número");
+			} else if(cateto2EsNumero) {
+				alert("Cateto 2 no número");
+			} else {
+				alert("Valor de la hipotenusa = " + hipotenusa);
+			}
+
+/*			if(cateto1EsNumero) {
+				alert("Cateto 1 no es número")
+			} else {
+				alert("Cateto 1 SÍ ES UN NÚMERO");
+			}
+			
+			if(cateto2EsNumero) {
+				alert("Cateto 2 no es número")
+			} else {
+				alert("Cateto 2 SÍ ES UN NÚMERO");
+			}
+
+			if(cateto1EsNumero==false && cateto2EsNumero==false)
+				alert("Valor de la hipotenusa = " + hipotenusa);*/
+
+		</script>
+	</body>
+</html>

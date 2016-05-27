@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+		
+		<p id="calculoArea"></p>
+		<p id="calculoPerimetro"></p>
+
+		<script>
+			var radio = prompt("Ingrese el radio");
+
+			if(!isNaN(radio)){
+				var area = Math.PI * Math.pow(radio,2);
+				var perimetro = 2 * Math.PI * radio;
+
+				var etiquetaArea = document.getElementById("calculoArea");
+				etiquetaArea.innerHTML = area;
+
+				var etiquetaPerimetro = document.getElementById("calculoPerimetro");
+				etiquetaPerimetro.innerHTML = perimetro;
+
+			} else {
+				alert("El radio debe ser un número");
+			}
+
+
+
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+		<h1>Ingrese la longitud del lado del cuadrado</h1>
+		<input type="text" value="30" id="txtTexto" />
+		<button id="btnCalculo">Calcular área del cuadrado</button>
+		<br>
+		<span>Área del cuadrado: </span><span id="areaCalculada"></span>
+
+
+		<script>
+			var texto = document.getElementById("txtTexto");
+			var boton = document.getElementById("btnCalculo");
+			var areaCalculada = document.getElementById("areaCalculada");
+
+			//boton.addEventListener("click", function(e) {
+			texto.addEventListener("keyup", function(e) {
+				var lado = texto.value;
+				var area = Math.pow(lado, 2);
+
+				//alert(area);
+				areaCalculada.innerHTML = area;
+			})
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+		
+
+		<script>
+			var cateto1 = prompt("Ingrese la longitud del cateto 1");
+
+			if(!isNaN(cateto1)) {
+
+				var cateto2 = prompt("Ingrese la longitud del cateto 2");
+
+				if(!isNaN(cateto2)){
+					var sumaPotencias = Math.pow(cateto1, 2) + Math.pow(cateto2, 2);
+
+					var hipotenusa = Math.sqrt(sumaPotencias);
+
+					alert("Hipotenusa = " + hipotenusa);
+
+
+				} else {
+					alert("No se puede calcular la hipotenusa");
+				}
+
+
+			} else {
+
+				alert("No se puede calcular la hipotenusa");
+			}
+
+
+
+
+
+		</script>
+	</body>
+</html>
