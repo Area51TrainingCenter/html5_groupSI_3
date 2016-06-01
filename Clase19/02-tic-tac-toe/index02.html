@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		* {
+			font-size:0;
+		}
+			div {
+				background-color: magenta;
+				font-size:40px;
+				line-height: 200px;
+				width:30%;
+				height: 200px;
+				text-align: center;
+				border: 1px solid black;
+				margin:2px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<script>
+			var letra = "X";
+
+			function presionado(e){
+				e.target.innerHTML = letra;
+
+				if(letra=="X") {
+					letra="O"
+				} else {
+					letra="X"
+				}
+			}
+
+			var casillas = document.getElementsByTagName("div");
+
+			for(var i=0; i<9; i++) {
+				casillas[i].addEventListener("click", presionado);
+			}			
+		</script>
+
+	</body>
+</html>

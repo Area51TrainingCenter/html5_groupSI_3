@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			div {
+				background-color: magenta;
+				font-size:40px;
+				line-height: 50px;
+				width:50px;
+				height: 50px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="casilla01"></div>
+		<div id="casilla02"></div>
+
+		<script>
+			function presionado(e){
+				e.target.innerHTML = "X";
+			}
+
+			var casilla01 = document.getElementById("casilla01");
+			casilla01.addEventListener("click", presionado);
+
+			var casilla02 = document.getElementById("casilla02");
+			casilla02.addEventListener("click", presionado);			
+		</script>
+
+	</body>
+</html>
