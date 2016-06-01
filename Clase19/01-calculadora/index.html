@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	<body>
+
+		<h1></h1>
+		
+		<button id="calcCuadrilatero" name="cuadrilatero">Cuadrílatero</button>
+		<button id="calcTriangulo" name="triangulo">Triángulos</button>
+		<button id="calcCirculo" name="circulo">Círculos</button>
+		<button id="calcTrapecio" name="trapecio">Trapecios</button>
+
+		<script>
+			var lista = document.getElementsByTagName("h1");
+			var resultado = lista[0];
+
+			function fnManejarEventos(e) {
+				
+				if(e.target.id=="calcCuadrilatero") {
+					var lado1 = prompt("Ingrese el valor del lado 1");
+					var lado2 = prompt("Ingrese el valor del lado 2");
+
+					var area = lado1 * lado2;
+
+					resultado.innerHTML = area;	
+				} else if(e.target.id=="calcTriangulo") {
+					var base = prompt("Ingrese el valor de la base");
+					var altura = prompt("Ingrese el valor de la altura");
+
+					var area = base * altura / 2;
+
+					resultado.innerHTML = area;					
+				} else if(e.target.id=="calcCirculo") {
+					var radio = prompt("Ingrese el valor del radio");
+
+					var area = Math.PI * radio * radio;
+					// var area = Math.PI * Math.pow(radio, 2);
+
+					resultado.innerHTML = area;					
+				} else {
+					var base1 = prompt("Ingrese el valor de la base 1");
+					var base2 = prompt("Ingrese el valor de la base 2");
+					var altura = prompt("Ingrese el valor de la altura");
+
+					var area = (base1 + base2) / 2 * altura;
+
+					resultado.innerHTML = area;					
+				}
+
+			}
+
+
+			/* Cálculo de área de cuadrilátero */
+			var aCuadrilatero = document.getElementById("calcCuadrilatero");
+			aCuadrilatero.addEventListener("click",  fnManejarEventos);
+
+			/* Cálculo de área de triángulo */
+			var aTriangulo = document.getElementById("calcTriangulo");
+			aTriangulo.addEventListener("click", fnManejarEventos);
+
+
+			/* Cálculo de área de círculo */
+			var aCirculo = document.getElementById("calcCirculo");
+			aCirculo.addEventListener("click", fnManejarEventos);
+
+
+			/* Cálculo de área del trapecio */
+			var aTrapecio = document.getElementById("calcTrapecio");
+			aTrapecio.addEventListener("click", fnManejarEventos);
+
+		</script>
+
+	</body>
+</html>
