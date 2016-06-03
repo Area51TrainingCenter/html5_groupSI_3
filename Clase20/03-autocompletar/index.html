@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<body>
+		<input type="text" id="textoABuscar">
+		<p id="filtro"></p>
+
+		<script>
+			var filtro = document.getElementById("filtro");
+			var input = document.getElementById("textoABuscar");
+
+			var distritos = ["san borja", "san isidro", "san miguel", "miraflores", "pueblo libre"];
+
+			input.addEventListener("keyup", function(){
+				filtro.innerHTML = "";
+				var texto = input.value;
+
+				for(var ind=0; ind<5; ind++) {
+					var elemento = distritos[ind];
+					var posicion = elemento.indexOf(texto);
+
+					if(posicion > -1){
+						filtro.innerHTML += elemento + "-";
+					}
+				}
+
+			});
+
+
+
+
+
+		</script>
+
+	</body>
+</html>
