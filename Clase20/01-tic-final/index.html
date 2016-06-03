@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		* {
+			font-size:0;
+		}
+			div {
+				background-color: magenta;
+				font-size:40px;
+				line-height: 200px;
+				width:30%;
+				height: 200px;
+				text-align: center;
+				border: 1px solid black;
+				margin:2px;
+				display: inline-block;
+				vertical-align: middle
+			}
+		</style>
+	</head>
+	<body>
+		<div dataCasilla="0"></div>
+		<div dataCasilla="1"></div>
+		<div dataCasilla="2"></div>
+		<div dataCasilla="3"></div>
+		<div dataCasilla="4"></div>
+		<div dataCasilla="5"></div>
+		<div dataCasilla="6"></div>
+		<div dataCasilla="7"></div>
+		<div dataCasilla="8"></div>
+
+		<script>
+			var letra = "X";
+
+			function validarSolucion(m1, m2, m3) {
+				var result;
+
+				if(marcas[m1]==marcas[m2] && marcas[m2]==marcas[m3] && marcas[m1]!="" && marcas[m2]!="" & marcas[m3]) {
+					result = true;
+				} else {
+					result = false;
+				}
+
+				return result;
+			}
+
+			function ganador(){
+				var resultado = false;
+
+				if( validarSolucion(0, 1, 2) ) resultado = true;
+				if( validarSolucion(3, 4, 5) ) resultado = true;
+				if( validarSolucion(6, 7, 8) ) resultado = true;
+				if( validarSolucion(0, 3, 6) ) resultado = true;
+				if( validarSolucion(1, 4, 7) ) resultado = true;
+				if( validarSolucion(2, 5, 8) ) resultado = true;
+				if( validarSolucion(0, 4, 8) ) resultado = true;
+				if( validarSolucion(2, 4, 6) ) resultado = true;
+
+				/*if(marcas[0]==marcas[1] && marcas[1]==marcas[2] && marcas[0]!="" && marcas[1]!="" && marcas[2]!="") resultado=true;
+				if(marcas[3]==marcas[4] && marcas[4]==marcas[5] && marcas[3]!="" && marcas[4]!="" && marcas[5]!="") resultado=true;
+				if(marcas[6]==marcas[7] && marcas[7]==marcas[8] && marcas[6]!="" && marcas[6]!="" && marcas[8]!="") resultado=true;
+
+				if(marcas[0]==marcas[3] && marcas[3]==marcas[6] && marcas[0]!="" && marcas[3]!="" && marcas[6]!="") resultado=true;
+				if(marcas[1]==marcas[4] && marcas[4]==marcas[7] && marcas[1]!="" && marcas[4]!="" && marcas[7]!="") resultado=true;
+				if(marcas[2]==marcas[5] && marcas[5]==marcas[8] && marcas[2]!="" && marcas[5]!="" && marcas[8]!="") resultado=true;
+
+				if(marcas[0]==marcas[4] && marcas[4]==marcas[8] && marcas[0]!="" && marcas[4]!="" && marcas[8]!="") resultado=true;
+				if(marcas[2]==marcas[4] && marcas[4]==marcas[6] && marcas[2]!="" && marcas[4]!="" && marcas[6]!="") resultado=true;*/
+
+				return resultado;
+			}
+
+			function empate(){
+				var empate = true;
+
+				for(var ind=0; ind<9; ind++){
+					if(marcas[ind]=="") empate=false;
+				}
+
+				if(empate) {
+					alert("Es un empate");
+				}
+			}
+
+			function presionado(e){
+				e.target.innerHTML = letra;
+
+				var numeroCasilla = e.target.getAttribute("dataCasilla");
+				// console.log(numeroCasilla);
+				marcas[numeroCasilla] = letra;
+
+				var estado = ganador();
+
+				if(estado) {
+					alert("Hay un ganador");
+				} else {
+					empate();
+				}
+
+
+
+				if(letra=="X") {
+					letra="O"
+				} else {
+					letra="X"
+				}
+			}
+
+			var marcas = ["", "", "", "", "", "", "", "", ""];
+
+			var casillas = document.getElementsByTagName("div");
+			for(var i=0; i<9; i++) {
+				casillas[i].addEventListener("click", presionado);
+			}			
+		</script>
+
+	</body>
+</html>
