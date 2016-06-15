@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="css/estilos.css">
+	</head>
+	<body>
+		
+		<div class="info">0</div>
+
+		<article></article>
+
+		<div class="slide slide01"></div>
+
+		<div class="slide slide02"></div>
+
+		<div class="slide slide03"></div>
+
+
+
+
+
+
+		<script src="js/skrollr.min.js"></script>
+		<script>
+			skrollr.init();
+
+			// Sirve para mostrar el desplazamiento del scroll
+			window.addEventListener("scroll", function(){
+				var desplazamiento = document.body.scrollTop;
+				var info = document.getElementsByClassName("info");
+				info[0].innerHTML = desplazamiento;
+			});
+			
+		</script>
+
+
+	</body>
+</html>

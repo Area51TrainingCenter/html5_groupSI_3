@@ -1,0 +1,53 @@
+html, body {
+	width:100%;
+	height: 100%;
+}
+
+body {
+	margin:0;
+	padding: 0;
+}
+
+article {
+	width:100%;
+	height:10000px;
+	background-color: grey;
+}
+
+div.info {
+	position:fixed;
+	width:200px;
+	background-color: white;
+	z-index:10000;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+div.slide {
+	width:100%;
+	height:100%;
+	position: fixed;
+	top:0%;
+}
+
+div.slide.slide01 {
+	background-color: red;
+	top:0%;
+}
+
+div.slide.slide02 {
+	background-color: green;
+	top:100%;
+}
+
+div.slide.slide03 {
+	background-color: blue;
+	top:100%;
+}
+
+
+
