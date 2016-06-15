@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body {
+				margin:0;
+				padding:0;
+				background-color: gray;
+			}
+
+			canvas {
+				background-color: black;
+				margin: 50px auto;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="miCanvas" width="600" height="600"></canvas>
+
+		<script>
+			var canvas = document.getElementById("miCanvas");
+			var contexto = canvas.getContext("2d");
+
+			
+			for(var indice=0; indice<10000; indice++) {
+				//Limpiar
+				contexto.clearRect(0, 0, 600, 600);
+				//Dibujar
+				contexto.fillStyle = "red";
+				contexto.fillRect(200, 20+indice/100, 40, 40);
+			}
+
+
+
+
+		</script>
+
+
+	</body>
+</html>
