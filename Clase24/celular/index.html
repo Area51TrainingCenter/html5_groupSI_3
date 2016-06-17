@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body {
+				margin:0;
+				padding: 0;
+			}
+
+			div.contenedor {
+				position: absolute;
+				perspective: 1000px;
+			}
+
+			div.carasCelular {
+				position: absolute;
+				top:100px;
+				left:0px;
+				width:1100px;
+				transform-style: preserve-3d;
+				animation: girar 4s infinite linear;
+			}
+
+			div.cara {
+				position: absolute;
+				top:100px;
+				left:400px;
+			}
+
+			div.cara.cara1 {
+				width:144px;
+				height: 276px;
+				background-color: green;
+				transform: translateZ(175px);
+			}
+
+			div.cara.cara2 {
+				width:144px;
+				height: 276px;
+				background-color: black;
+				transform: translateZ(165px);
+			}
+			div.cara.cara3 {
+				width:10px;
+				height: 276px;
+				background-color: yellow;
+				transform: translateX(72px) rotateY(-90deg);
+			}
+
+			@keyframes girar {
+				0% {
+					transform:rotateY(0deg);
+				}
+
+				100% {
+					transform:rotateY(360deg);
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="contenedor">
+			<div class="carasCelular">
+				<div class="cara cara1">
+					<img src="img/celular.png" alt="">
+				</div>
+				<div class="cara cara2"></div>
+				<div class="cara cara3"></div>				
+				<div class="cara cara4"></div>						
+					
+			</div>			
+		</div>
+		
+
+
+
+	</body>
+</html>
